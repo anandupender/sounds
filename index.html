@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Visualizer</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/home.css">
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <div class="title">
+                Music Visualizations!
+            </div>
+            <div class="subtitle">
+                these are some musical sketches created every sometimes and posted here and my <a href="https://www.instagram.com/pixels_and_plates/" target="_blank" rel="noreferrer">insta</a>. volumes up! 🔈
+            </div>
+        </div>
+
+        <div id="allRecords">
+            <div class="recordCover" v-for="sketch in sketches" onclick>
+                <video loop v-bind:poster="sketch.poster" onmouseover="play(this)" onmouseout="pause(this)" v-on:click="loadSketch(sketch.file)">
+                    <source v-bind:src="sketch.video" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="song">
+                    {{ sketch.song }}
+                </div>
+                <div class="artist">
+                    {{ sketch.artist }}
+                </div>
+                <div class="hole">
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stickerContainer">
+        <div class="sticker">
+            🎶
+        </div>
+        <div class="sticker">
+            🎧
+        </div>
+        <div class="sticker">
+           🔊
+        </div>
+    </div>
+
+    <footer>
+        <a href="https://www.anandupender.com/">created by anand upender in July 2020</a> // made with p5.js // inspired by <a href="http://surayashivji.com/" target="_blank">Suraya Shivi</a>
+    </footer>
+
+    <script src="/js/p5.js"></script>
+    <script src="/js/p5.sound.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="/js/main.js"></script>
+    
+</body>
+</html>

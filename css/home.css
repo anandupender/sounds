@@ -1,0 +1,156 @@
+body{
+    font-family: 'VT323', monospace;
+    overflow: hidden;
+    height:100vh;
+}
+
+a, a:visited{
+    color:black;
+    text-decoration: none;
+    background-color:#eee;
+}
+
+a:hover{
+    background-color:black;
+    color:white;
+}
+
+#header{
+    position: fixed;
+    top: 50px;
+    height:200px;
+    padding-left:100px;
+}
+
+footer{
+    position: fixed;
+    bottom: 10px;
+    padding-left:100px;
+}
+
+.title{
+    font-size:56px;
+}
+.subtitle{
+    font-size:18px;
+}
+
+
+#allRecords{
+    position: absolute;
+    padding-left:100px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 250px;
+    margin-right:100px;
+    width: fit-content;
+    bottom:70px;
+}
+
+.recordCover{
+    width:400px;
+    height:400px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    border-radius:25px;
+    padding:30px;
+    margin-right: 80px;
+    border: 5px solid black;
+    transition: border-color 250ms ease;
+}
+.recordCover:hover{
+    border-color:#ffffff00;
+}
+
+video{
+    width: inherit;
+    object-fit: cover;
+    border-radius:10px;
+    transition: border-radius 350ms ease;
+    border: 5px solid black;
+    box-sizing: border-box;
+}
+
+video:hover{
+    border-radius: 50%;
+    cursor:wait;
+    box-shadow: 0px 0px 15px 3px rgba(202, 178, 178, 0.6);
+}
+
+video:hover  ~ .song{
+    opacity: 0;
+}
+video:hover  ~ .artist{
+    opacity: 0;
+}
+video:hover  ~ .hole{
+    opacity: 1;
+}
+
+.artist{
+    transition:opacity 250ms ease;
+    opacity: 1;
+    font-size: 24px;
+    position: absolute;
+    top:3px;
+
+}
+.song{
+    transition:opacity 250ms ease;
+    opacity: 1;
+    font-size: 24px;
+    position: absolute;
+    bottom:3px;
+}
+
+.hole{
+    pointer-events : none;
+    position: absolute;
+    width:60px;
+    height:60px;
+    background-color:white;
+    border-radius: 50%;
+    top:190px;
+    z-index:100;
+    opacity: 0;
+    transition: opacity 250ms ease;
+    box-shadow: inset 0px 0px 15px -4px rgba(0,0,0,0.4);
+}
+
+.stickerContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top:50px;
+    right:50px;
+}
+
+.sticker{
+    font-size: 42px;
+    /* border: 3px solid black; */
+    text-align: center;
+    animation: rotating 10s linear infinite;
+    margin-left: 50px;
+
+}
+
+@keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
