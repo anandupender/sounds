@@ -1,6 +1,6 @@
 body{
     font-family: 'VT323', monospace;
-    overflow: hidden;
+    overflow-y: hidden;
     height:100vh;
 }
 
@@ -13,6 +13,34 @@ a, a:visited{
 a:hover{
     background-color:black;
     color:white;
+}
+
+#allowAudio{
+    position:fixed;
+    z-index:100000;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+button{
+    outline:none;
+    border:none;
+    padding: 18px 32px 18px 32px;
+    background-color: black;
+    color:white;
+    font-size: 36px;
+    font-weight: bold;
+}
+button:hover{
+    cursor: pointer;
+    color: black;
+    background-color:white;
+    border: 5px solid black;
+
 }
 
 #header{
@@ -59,7 +87,7 @@ footer{
     border: 5px solid black;
     transition: border-color 250ms ease;
 }
-.recordCover:hover{
+.recordCover:hover, .recordCover:active{
     border-color:#ffffff00;
 }
 
@@ -72,19 +100,19 @@ video{
     box-sizing: border-box;
 }
 
-video:hover{
+video:hover, video:active{
     border-radius: 50%;
     cursor:wait;
     box-shadow: 0px 0px 15px 3px rgba(202, 178, 178, 0.6);
 }
 
-video:hover  ~ .song{
+video:hover  ~ .song, video:active ~ .song{
     opacity: 0;
 }
-video:hover  ~ .artist{
+video:hover  ~ .artist, video:active ~ .artist{
     opacity: 0;
 }
-video:hover  ~ .hole{
+video:hover  ~ .hole, video:active ~ .hole{
     opacity: 1;
 }
 
@@ -153,4 +181,57 @@ video:hover  ~ .hole{
       -o-transform: rotate(360deg);
       transform: rotate(360deg);
     }
+  }
+
+  @media only screen and (max-width: 500px) {
+      body{
+        overflow-y: scroll;
+        overflow-x: hidden;
+      }
+      #header{
+          position: absolute;
+          margin-left:20px;
+          padding-left: 0;
+          height:auto;
+          width:100vw;
+      }
+      .subtitle{
+          width:90%;
+      }
+      #allRecords{
+          flex-direction: column;
+          align-items: center;
+          top:20px;
+          padding-left:10px;
+          width:95vw;
+          margin:0;
+          margin-top: 250px;
+          bottom:auto;
+      }
+      .recordCover{
+          width:75vw;
+          height:75vw;
+          margin-bottom: 40px;
+          margin-right: 0;
+      }
+      .recordCover:hover, .recordCover:active{
+        width:85vw;
+        height:85vw;
+        padding: 0;
+      }
+      .hole{
+          display:none;
+      }
+      .stickerContainer{
+          position: absolute;
+          top:20px;
+          right:20px;
+      }
+      .sticker{
+          margin-left: 20px;
+          font-size: 32px;
+      }
+      footer{
+          display:none;
+      }
   }

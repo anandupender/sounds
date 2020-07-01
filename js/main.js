@@ -37,5 +37,14 @@ function transformScroll(event) {
     event.currentTarget.scrollLeft += event.deltaY + event.deltaX;
   }
   
-  var element = document.scrollingElement || document.documentElement;
-  element.addEventListener('wheel', transformScroll);
+  //for desktop, transform scroll into other direction
+  if(window.innerWidth >= 500){
+      console.log(window.innerWidth);
+    var element = document.scrollingElement || document.documentElement;
+    element.addEventListener('wheel', transformScroll);
+
+  }
+
+  function removeButton(){
+      document.querySelector("#allowAudio").style.display = "none";
+  }
