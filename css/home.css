@@ -97,7 +97,6 @@ video{
     border-radius:10px;
     transition: border-radius 350ms ease;
     border: 5px solid black;
-    box-sizing: border-box;
 }
 
 video:hover, video:active{
