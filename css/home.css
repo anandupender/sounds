@@ -45,7 +45,7 @@ button:hover{
 
 #header{
     position: fixed;
-    top: 50px;
+    top: 30px;
     height:200px;
     padding-left:100px;
 }
@@ -57,7 +57,7 @@ footer{
 }
 
 .title{
-    font-size:56px;
+    font-size:64px;
 }
 .subtitle{
     font-size:18px;
