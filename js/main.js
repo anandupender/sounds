@@ -45,7 +45,3 @@ function transformScroll(event) {
     element.addEventListener('wheel', transformScroll);
 
   }
-
-  function removeButton(){
-      document.querySelector("#allowAudio").style.display = "none";
-  }

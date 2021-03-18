@@ -14,6 +14,7 @@
     <div id="allowAudio">
         <button onclick="removeButton()">Allow Sound</button>
     </div>
+
     <div id="content">
         <div id="header">
             <div class="title">
@@ -58,6 +59,12 @@
     <footer>
         created by <a href="https://www.anandupender.com/">anand upender</a> in July 2020 // made with <a href="https://p5js.org/" target="_blank">p5.js</a> // inspired by <a href="http://surayashivji.com/" target="_blank">Suraya Shivi</a>
     </footer>
+
+    <script>
+        function removeButton(){
+        document.querySelector("#allowAudio").style.display = "none";
+    }
+    </script>
 
     <script src="/js/p5.js"></script>
     <script src="/js/p5.sound.js"></script>
