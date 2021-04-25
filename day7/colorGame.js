@@ -35,7 +35,7 @@ function draw(){
         }
   
     }
-    // console.log(maxIndex);
+    console.log(maxIndex);
     var mapped = map(maxIndex,lowerBound,higherBound,255,0);
     background(color(mapped,mapped,mapped));
 

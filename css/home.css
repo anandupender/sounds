@@ -15,6 +15,11 @@ a:hover{
     color:white;
 }
 
+a.recordCover:hover, a.recordCover:visited:hover{
+    background-color: transparent;
+    color: inherit;
+}
+
 #allowAudio{
     position:fixed;
     z-index:100000;
@@ -101,7 +106,6 @@ video{
 
 video:hover, video:active{
     border-radius: 50%;
-    cursor:wait;
     box-shadow: 0px 0px 15px 3px rgba(202, 178, 178, 0.6);
 }
 

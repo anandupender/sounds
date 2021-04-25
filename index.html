@@ -26,7 +26,7 @@
         </div>
 
         <div id="allRecords">
-            <div class="recordCover" v-for="sketch in sketches" onclick>
+            <a class="recordCover" v-for="sketch in sketches" onclick v-bind:href="sketch.file">
                 <video loop v-bind:poster="sketch.poster" onmouseover="play(this)" onmouseout="pause(this)" v-on:click="loadSketch(sketch.file)">
                     <source v-bind:src="sketch.video" type="video/mp4">
                     Your browser does not support the video tag.
@@ -40,7 +40,7 @@
                 <div class="hole">
     
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 

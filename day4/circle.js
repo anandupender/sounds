@@ -20,7 +20,6 @@ function draw(){
     background(255);
 
     let spectrum = fft.analyze();
-
     //iterate through to set x and y values
 
     var currX = 0;
